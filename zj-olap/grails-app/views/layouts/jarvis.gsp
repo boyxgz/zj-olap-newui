@@ -190,6 +190,7 @@
 					<li class="treeview"><a href="#"><i class="fa fa-link"></i>
 							<span>系统设置</span> <i class="fa fa-angle-left pull-right"></i></a>
 						<ul class="treeview-menu">	
+				                <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="dbBackupMng">数据备份</g:link></li>  
 				                <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="customerType">销售类别管理</g:link></li>
 				                <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="customerTypeLevel2">机构类型管理</g:link></li>
 				                <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="customerTypeLevel3">工业分类管理</g:link></li>

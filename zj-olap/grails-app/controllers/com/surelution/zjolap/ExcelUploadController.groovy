@@ -1147,8 +1147,8 @@ class ExcelUploadController {
 		try {
 			List<SalesOrder>  salesOrders = SalesOrder.findAllByUpload(excelUploadInstance)
 			salesOrders.each{
-				//it.isVail = false
-				//it.optionValue = SalesOrder.OPTION_VALUE_DELETE
+				it.isVail = false
+				it.optionValue = SalesOrder.OPTION_VALUE_DELETE
 				it.delete()
 			}
 
