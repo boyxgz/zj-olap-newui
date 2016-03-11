@@ -169,18 +169,6 @@
 				--%></section>
 	<section class="content">
 
-		<div class="c1" style=" height: 30px; border-bottom: 1px solid #e5e5e5;margin-bottom:10px;">
-            <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>
-			<g:link class="create" action="create" data-toggle="modal" data-target="#myModal"><g:message code="default.new.label" args="[entityName]" /></g:link>
-			<!-- 新增台账的dialog -->	
-			 <div class="modal fade" id="myModal" role="dialog">
-                     <div class="modal-dialog">
-                           <!-- Modal content-->
-                           <div class="modal-content"> 
-                           </div>
-                          </div>
-                      </div>		
-       </div>
        <g:if test="${flash.message}">
 				<div class="message" role="status" style="color:red; font-weight:bold;">
 					${flash.message}

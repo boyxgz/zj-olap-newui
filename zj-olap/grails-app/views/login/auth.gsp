@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="${resource(dir:'jarvis/css',file:'AdminLTE.min.css')}">
 <script type="text/javascript" src="${resource(dir:'jarvis/js',file:'bootstrap.min.js') }"></script>
 <script type="text/javascript" src="${resource(dir:'jarvis/js',file:'icheck.min.js') }"></script>
-<script type="text/javascript" src="${resource(dir:'jarvis/js',file:'jQuery-2.1.4.min.js') }"></script>
+<script src="http://cdn.staticfile.org/jquery/2.1.1-rc2/jquery.min.js"></script>
 <link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.1/css/bootstrap.css">
 <link rel="stylesheet" href="${resource(dir:'jarvis/css',file:'blue.css')}">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">

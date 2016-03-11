@@ -14,7 +14,7 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>
-					欢迎进入中国石油浙江销售分公司经营分析系统
+					欢迎使用中国石油浙江销售分公司经营分析系统
 				</h1>
 				<%--<ol class="breadcrumb">
 					<li><a href="#" style="cursor: none;"><i class="fa fa-dashboard"></i> 首页</a></li>

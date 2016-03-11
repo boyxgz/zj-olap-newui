@@ -54,8 +54,6 @@
 		<header class="main-header">
             <!-- Logo -->
 			<a href="" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
-				<span class="logo-mini"><b>销售</b>分析</span> <!-- logo for regular state and mobile devices -->
-				<span class="logo-lg"><b>浙江</b>销售分析系统</span>
 			</a>
 			
 			<!-- Header Navbar -->
@@ -77,9 +75,7 @@
             </a>
             <ul class="dropdown-menu" id="dropdown-menu"> 
               <li class="user-header">
-                <p>
-                                                            中国石油浙江销售分公司
-                  <small>经营分析系统</small>
+                <p>中国石油浙江销售分公司<small>经营分析系统</small>
                 </p>
               </li>
               <!-- Menu Footer-->
