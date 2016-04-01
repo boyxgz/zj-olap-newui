@@ -2,22 +2,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta name="layout" content="main">
+		<meta name="layout" content="jarvis">
 		<g:set var="entityName" value="${message(code: 'bigCase.label', default: 'BigCase')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
+		<style>
+			.table{width:350px; border:1px solid #ddd;}
+			td{width:50%; }
+			.table > tbody > tr > td{border-top: 0px solid #ddd;}
+		</style>
 	</head>
 	<body>
-		<a href="#create-bigCase" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+	<div class="content-wrapper">
+		<section class="content-header'">
+			<div class="nav" role="navigation"></div>
+			<h1>新增BigCase</h1>
+		</section>
+		<section class="content">
 		<div id="create-bigCase" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+			<g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link>
 			<g:if test="${flash.message}">
-			<div class="message" role="status">${flash.message}</div>
+				<div class="message" role="status">${flash.message}</div>
 			</g:if>
 			<g:hasErrors bean="${bigCaseInstance}">
 			<ul class="errors" role="alert">
@@ -27,13 +31,34 @@
 			</ul>
 			</g:hasErrors>
 			<g:form action="save" >
-				<fieldset class="form">
-					<g:render template="form"/>
-				</fieldset>
-				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
-				</fieldset>
+					<table class="table">
+						<tr>
+							<td align="right">
+								<g:message code="bigCase.defaultOption.label" default="Default Option" />
+							</td>
+							<td align="left">
+								<g:checkBox name="defaultOption" value="${bigCaseInstance?.defaultOption}" />
+							</td>
+						</tr>
+						<tr>
+							<td align="right">
+								<g:message code="bigCase.name.label" default="Name" />
+							</td>
+							<td align="left">
+								<g:textField name="name" value="${bigCaseInstance?.name}"/>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td align="right">
+								<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+							</td>
+						</tr>
+					</table>
+					
 			</g:form>
 		</div>
+		</section>
+	</div>
 	</body>
 </html>

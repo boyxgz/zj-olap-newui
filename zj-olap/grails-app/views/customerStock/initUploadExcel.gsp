@@ -49,9 +49,8 @@
 						</label></dt>
 	                           <dd>
 	                               <div class="col-md-3">
-	                             <input type="file" name="excelFile" class="form-control" accept="application/vnd.ms-excel"/>
+	                             		<input type="file" name="excelFile" class="form-control" accept="application/vnd.ms-excel"/>
 	                               </div>
-	                               
 	                               <div class="col-md-3"><p style="color: red; font-weight: bold; line-height: 30px;">文件的类型为：.xls格式</p></div>
 	                            </dd>
 	                        </dl>		

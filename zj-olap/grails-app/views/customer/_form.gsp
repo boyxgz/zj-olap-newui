@@ -3,10 +3,9 @@
 <%@page import="com.surelution.zjolap.CustomerType"%>
 
 <script type="text/javascript">
-	$(document).ready(function()
-	    {
+	$(document).ready(function(){
 		loadType2();
-	    });
+	});
 
 	function loadType2() {
 		var typeID =  $('#customerTypeID').children('option:selected').val();
@@ -155,21 +154,23 @@
    
 <div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'customerType', 'error')} ">
 	<dl class="dl-horizontal">
-	   <dt><label for="customerType">
-		<g:message code="customer.customerType.label" default="Customer Type" />
-		
-	</label></dt>
-	   <dd>
+	   <dt>
+	   	<label for="customerType">
+			<g:message code="customer.customerType.label" default="Customer Type" />
+		</label>
+		</dt>
+		<dd>
 	      <div class="col-xs-10">
-	 <div style="display: none;">
-	<%--<g:select id="customerType" name="customerType.id" from="${CustomerTypeLevel3.list() }" optionKey="id" optionValue="name" value="${customerInstance?.customerType?.id}"/>
-	--%></div>
-	<div class="row">
-	<div class="col-md-3">
-	<g:select id="customerTypeID" name="customerTypeID" from="${CustomerType.list() }" optionKey="id" optionValue="name" onchange="loadType2()"  value="${customerInstance?.customerType?.level2?.level1?.id}" class="form-control" style="width:150px;"/>
-	</div>
-	<div class="col-md-4">
-	<select id="customerType2ID" name="customerType2ID" onchange="loadType3()" class="form-control" style="width:220px;">
+			 <div style="display: none;">
+				<g:select id="customerType" name="customerType2.id" from="${CustomerTypeLevel3.list() }" optionKey="id" optionValue="name" value="${customerInstance?.customerType?.id}"/>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<g:select id="customerTypeID" name="customerTypeID" from="${CustomerType.list() }" optionKey="id" optionValue="name" onchange="loadType2()"  value="${customerInstance?.customerType?.level2?.level1?.id}" class="form-control" style="width:150px;"/>
+		<%--<p>${CustomerType.list() }</p>--%>
+				</div>
+				<div class="col-md-4">
+				<select id="customerType2ID" name="customerType2ID" onchange="loadType3()" class="form-control" style="width:220px;">
 	
 	</select>
 	</div>

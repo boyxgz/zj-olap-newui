@@ -59,53 +59,62 @@
 			<!-- Header Navbar -->
 			<nav class="navbar navbar-static-top" role="navigation">
 				<!-- Sidebar toggle button-->
-				<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
-					role="button"> <span class="sr-only">Toggle navigation</span>
+				<a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+					<span class="sr-only">Toggle navigation</span>
 				</a>
-				
-				<div style="float: left; color: white; line-height: 100%; margin-left: 30%;"><h4>中国石油浙江销售分公司经营分析系统
-				   </h4></div>
+				<div style="float: left; color: white; line-height: 100%; margin-left: 30%;">
+					<h4>中国石油浙江销售分公司经营分析系统</h4>
+				</div>
 				<!-- Navbar Right Menu -->
-				<div class="navbar-custom-menu">
-				   
+				<div class="pull-right" style="margin-top:8px;">
+					<span class="hidden-xs" style="font-size:16px; color:#fff;">当前用户：<sec:username /></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					<g:link controller="user" action="showChangePw" class="btn btn-default" style="height:30px;; width:65px;"><p style="margin-left:-4px; font-size:12px;">修改密码</p></g:link>&nbsp;&nbsp;
+					<g:link controller="logout" class="btn btn-default" style="height:30px; width:65px;"><p style="font-size:12px; margin-left:-4px;">退出登录</p></g:link>&nbsp;&nbsp;&nbsp;
+				</div>
+				<%--<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav sidebar-menu">				
 						<li class="dropdown user user-menu treeview" id="alink">
-                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
-              <span class="hidden-xs">当前用户：<sec:username /></span>
-            </a>
-            <ul class="dropdown-menu" id="dropdown-menu"> 
-              <li class="user-header">
-                <p>中国石油浙江销售分公司<small>经营分析系统</small>
-                </p>
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                 <g:link controller="user" action="showChangePw" class="btn btn-default btn-flat">修改密码</g:link>
-                </div>
-                
-                <div class="pull-right">
-                  <g:link controller="logout" class="btn btn-default btn-flat">退出登录</g:link>
-                </div>
-              </li>
-            </ul>
-          </li>
-								
+		                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >
+				            	<span class="hidden-xs">当前用户：<sec:username /></span>
+				            </a>
+			            <ul class="dropdown-menu" id="dropdown-menu"> 
+							<li class="user-header">
+							  <p>中国石油浙江销售分公司<small>经营分析系统</small>
+							  </p>
+							</li>
+							<!-- Menu Footer-->
+							<li class="user-footer">
+							  <div class="pull-left">
+							   <g:link controller="user" action="showChangePw" class="btn btn-default btn-flat">修改密码</g:link>
+							  </div>
+							  
+							  <div class="pull-right">
+							    <g:link controller="logout" class="btn btn-default btn-flat">退出登录</g:link>
+							  </div>
+							</li>
+			            </ul>
+			          	</li>
 						<!-- Control Sidebar Toggle Button -->
-						<%--<li><a href="#" data-toggle="control-sidebar"><i
-								class="fa fa-gears"></i></a></li>
-					--%></ul>
-				</div>
+						<li>
+							<a href="#" data-toggle="control-sidebar">
+								<i class="fa fa-gears"></i>
+							</a>
+						</li>
+					</ul>
+				</div>--%>
 			</nav>
 		</header>
 		
 		<aside class="main-sidebar">			
 			<section class="sidebar">				
 				<ul class="sidebar-menu">
-					<li class="header">HEADER</li>					
 					<!-- 一个导航链接开始 -->
-					<li class="treeview"><a href="#"><i class="fa fa-th-list"></i>
-							<span>台账</span> <i class="fa fa-angle-left pull-right"></i></a>
+					<li class="treeview">
+						<a href="#">
+							<i class="fa fa-th-list"></i>
+							<span>台账</span> 
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
 						<ul class="treeview-menu">
 							<li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="salesOrder" action="list">销售台账</g:link></li>
 							<li><a href="#" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="salesOrder" action="listApprove">台账审批</g:link></li>
@@ -113,7 +122,8 @@
 							<li><a href="#" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="salesOrder" action="changeFMstatusClose">关闭台账账期</g:link></li>
 				            <li><a href="#" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="salesOrder" action="changeFMstatusOpen">开启台账账期</g:link></li>
 							</sec:ifAnyGranted>
-						</ul></li>
+						</ul>
+					</li>
 					<!-- 一个导航链接结束 -->
 					
 					<!-- 一个导航链接开始 -->
@@ -151,14 +161,18 @@
 					<!-- 一个导航链接结束 -->
 					
 					<!-- 一个导航链接开始 -->
-					<li class="treeview"><a href="#"><i class="fa fa-user"></i>
-							<span>客户</span> <i class="fa fa-angle-left pull-right"></i></a>
+					<li class="treeview">
+						<a href="#"><i class="fa fa-user">
+							</i><span>客户</span> 
+							<i class="fa fa-angle-left pull-right"></i>
+						</a>
 						<ul class="treeview-menu">
 							<li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="salesOrder" action="listNewCustomerCount">新客户数量</g:link></li>
 			                <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="customerVisting" action="list">客户回访记录</g:link></li>
 			                <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="customer">客户管理</g:link></li>
 				            <li><a href="" style="float:left;"><i class="fa fa-circle-thin"></i></a><g:link controller="customer" action="listApprove">客户管理审批</g:link></li>
-						</ul></li>
+						</ul>
+					</li>
 					<!-- 一个导航链接结束 -->
 					
 					<!-- 一个导航链接开始 -->
